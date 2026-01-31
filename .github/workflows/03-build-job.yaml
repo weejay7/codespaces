@@ -11,4 +11,11 @@ jobs:
           - name: Show OS
             run: |
               echo "this job is running on an ubunutu runner."
-              echo "Runnr OS: $RUNNER_OS"
+              echo "Runner OS: $RUNNER_OS"
+    windows-echo:
+        runs-on: windows-latest
+        steps:
+            - name: Show OS
+              run: |
+                echo "this job is running on an ubunutu runner."
+                echo "Runner OS: $RUNNER_OS"
