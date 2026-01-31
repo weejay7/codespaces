@@ -1,0 +1,13 @@
+name: build-block-05-2
+on:
+   pull_request:
+        types:
+            - closed
+        branches:
+            - main
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo "Running whenever a PR is closed."
