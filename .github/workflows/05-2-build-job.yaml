@@ -1,4 +1,4 @@
-name: build-block-05
+name: build-block-05-2
 on:
    pull_request:
         types:
