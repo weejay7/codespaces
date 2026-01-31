@@ -1,0 +1,10 @@
+name: build-job-02
+
+on: push
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: show the trigger
+              run: echo "i trigger by ${{github.event_name}} event."
