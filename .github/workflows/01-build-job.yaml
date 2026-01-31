@@ -11,9 +11,9 @@ jobs:
   echo-bye:
     runs-on: ubuntu-latest
     steps:
-      - name: Failed
+      - name: success
         run: |
-          echo "i will fail"
-          exit 1
+          echo "i will succes"
+          exit 0
       - name: Say bye
         run : echo "bye"
