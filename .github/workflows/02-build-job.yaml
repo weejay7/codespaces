@@ -1,7 +1,7 @@
 name: build-job-02
 
 on: 
-    pull_request:
+    workflow_dispatch:
 
 jobs:
     echo:
