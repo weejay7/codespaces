@@ -1,0 +1,14 @@
+name: build-block-03
+
+on: 
+    push:
+    workflow_dispatch:
+
+jobs:
+    ubuntu-echo:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Show OS
+            run: |
+              echo "this job is running on an ubunutu runner."
+              echo "Runnr OS: $RUNNER_OS"
