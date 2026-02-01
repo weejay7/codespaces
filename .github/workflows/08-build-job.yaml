@@ -6,6 +6,7 @@ on:
 env:
     WORKFLOW_VAR: 'workflow_value'
     OVERWRITTEN_VAR: 'workflow_overwritten'
+    UNDEFINED_VAR_WITH_DEFAULT: ${{vars.UNDEFINED_VAR || 'default value'}}
 
 jobs:
     echo:
@@ -32,10 +33,3 @@ jobs:
                 OVERWRITTEN_VAR: 'step_overwritten'
               run: |
                 echo "Step env var: ${{ env.OVERWRITTEN_VAR}}"
-    echo2:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print Variable
-              run: |
-                echo "Org var: "
-                echo "Org overwritten var: "
