@@ -1,7 +1,6 @@
 name: 08- using variables
 
 on:
-    push:
     workflow_dispatch:
 
 env:
@@ -33,3 +32,10 @@ jobs:
                 OVERWRITTEN_VAR: 'step_overwritten'
               run: |
                 echo "Step env var: ${{ env.OVERWRITTEN_VAR}}"
+    echo2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Variable
+              run: |
+                echo "Org var: "
+                echo "Org overwritten var: "
