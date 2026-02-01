@@ -14,7 +14,7 @@ jobs:
         steps:
             - name: Print start-up data
               run: |
-                 if[inputs.debug=='true'] then
+                 if: github.event_name == push then
                     echo Triggred by:${{ github.event_name }}
                     echo Branch: ${{ github.Branch}}
                     echo Commit SHA: ${{ github.sha}}
